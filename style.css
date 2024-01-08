@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      height: 100vh;
+}
+
+.main , .main2 , .main3{
+    height: 150px;
+    width: 150px;
+    /* background: red; */
+}
+
+.loader {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /* background: yellow; */
+    border: 15px solid green;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    animation: rotate 2s linear 0.5s infinite;
+}
+.loader2{
+    height: 100%;
+    width: 100%;
+    /* background: blue; */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main2 .loader2 > span {
+    height: 50px;
+    width: 20px;
+    background: blue;
+    /* z-index: 100; */
+    position: relative;
+    top: -20%;
+}
+#one {
+    animation: upDown 0.8s linear 0s infinite alternate;
+}
+#two {
+    animation: upDown 0.8s linear 0.3s infinite alternate;
+}
+#three {
+    animation: upDown 0.8s linear 0.6s infinite alternate;
+}
+
+@keyframes upDown {
+    0%{
+        top: -20%;
+    }
+    100%{
+        top: 20%;
+    }
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+.loader3{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    /* background: yellow; */
+}
+.main3 .loader3 span{
+    height: 12px;
+    width: 12px;
+    background: red;
+    position: absolute;
+    border-radius: 50%;
+}
+
+#dot1 {
+    height: 20px;
+    width: 20px;
+    background-color: blue;
+    top: 75px;
+    left: 0;
+    animation: roller 1.6s 0s linear infinite;
+}
+#dot2 {
+    left: 37.5px;
+    top: 37.5px;
+    animation: roller 1.6s 0.2s linear infinite;
+}
+#dot3 {
+    top: 0;
+    left: 75px;
+    animation: roller 1.6s 0.4s linear infinite;
+}
+#dot4 {
+    top: 37.5px;
+    left: 112.5px;
+    animation: roller 1.6s 0.6s linear infinite;
+}
+#dot5 {
+    top: 75px;
+    left: 150px;
+    animation: roller 1.6s 0.8s linear infinite;
+}
+#dot6 {
+    top: 112.5px;
+    left: 112.5px;
+    animation: roller 1.6s 1s linear infinite;
+}
+#dot7 {
+    top: 150px;
+    left: 75px;
+    animation: roller 1.6s 1.2s linear infinite;
+}
+#dot8 {
+    top: 112.5px;
+    left: 37.5px;
+    animation: roller 1.6s 1.4s linear infinite;
+}
+
+@keyframes roller {
+    0%{
+        top: 75px;
+        left: 0;
+    }
+    12.5%{
+        left: 37.5px;
+    top: 37.5px;
+    }
+    25%{
+        top: 0;
+    left: 75px;
+    }
+    37.5%{
+        top: 37.5px;
+    left: 112.5px;
+    }
+    50%{
+        top: 75px;
+        left: 150px;
+    }
+    62.5%{
+        top: 112.5px;
+        left: 112.5px;
+    }
+    75%{
+        top: 150px;
+        left: 75px;
+    }
+    87.5%{
+        top: 112.5px;
+        left: 37.5px;
+    }
+    100%{
+        top: 75px;
+        left: 0;
+    }
+  }
